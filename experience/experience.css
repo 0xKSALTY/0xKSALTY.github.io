@@ -1,0 +1,159 @@
+@import url('https://fonts.cdnfonts.com/css/ica-rubrik-black');
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    background: linear-gradient(135deg, #4f4385, #e99eae);
+    background-size: auto 160%;
+    background-image: url(experience_bg.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: rgba(120, 90, 40, 0.671);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    opacity: 0.6;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar:hover {
+    background-color: rgb(247, 247, 253);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+.navbar a {
+    color: #050404;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #df731a;
+}
+
+.popup-content {
+    transform: scale(0.75);
+    transition: transform 0.3s ease-in-out;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
+    overflow: auto;
+    resize: both;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content .close {
+    color: #000;
+}
+
+.image-container {
+    width: 100%;
+    overflow-x: auto;
+    padding: 1rem;
+    background-color: rgba(223, 90, 90, 0.712);
+    border-radius: 16px;
+    opacity: 20%;
+}
+
+@media (prefers-reduced-motion) {
+    .hidden {
+        transition: none;
+    }
+}
+
+[data-aos] {
+    opacity: 0;
+    transition-property: transform, opacity;
+    transition-timing-function: ease-in-out;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+}
+
+[data-aos="fade-up"] {
+    transform: translateY(50px);
+}
+
+[data-aos="fade-up"].aos-animate {
+    transform: translateY(0);
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.vertical-nav {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    background-color: rgba(238, 23, 23, 0.5);
+    padding: 10px;
+    border-radius: 0 10px 10px 0;
+    z-index: 1000;
+    opacity: 0.9;
+}
+
+.vertical-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vertical-nav ul li {
+    margin: 10px 0;
+}
+
+.vertical-nav ul li a {
+    color: white;
+    font-size: 1.5em;
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.vertical-nav ul li a:hover {
+    background-color: #4a5568;
+    color: #df731a;
+    border-radius: 5px;
+}
+
+.text-orange {
+    color: orange;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.text-orange:hover {
+    color: darkorange;
+}
