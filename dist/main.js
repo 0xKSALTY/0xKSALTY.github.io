@@ -1,6 +1,6 @@
 import './style.css';
-import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.150.0/build/three.module.js';
-import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/controls/OrbitControls.js';
+import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.167.1/three.module.js';
+import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three-orbitcontrols@2.110.3/OrbitControls.min.js';
 import { normalMap } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/nodes/Nodes.js';
 import { TextGeometry } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/geometries/TextGeometry.js';
 import gsap from 'https://cdn.jsdelivr.net/npm/gsap@3.11.5/dist/gsap.min.js';
