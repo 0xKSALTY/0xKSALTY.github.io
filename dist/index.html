@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Salty's Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&subset=cyrillic" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.polyfill.io/v3/polyfill.min.js"></script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "./build/three.module.js",
+                "three/examples/jsm/controls/OrbitControls":"./jsm/controls/OrbitControls.js",
+                "three/examples/jsm/libs/stats.module":"./jsm/libs/stats.module.js",
+            }
+        }
+    </script>
+    <canvas id="webgl" class="fixed top-0 left-0 w-full h-full z-0 pointer-events-none"></canvas>
+
+<body class="overflow-x-hidden font-mono bg-gray-100 relative">
+    <canvas id="webgl" class="fixed top-0 left-0 w-full h-full z-0"></canvas>
+    <nav class="navbar flex justify-between items-center p-4 text-black relative z-10 bg-gray-100 shadow-2xl shadow-inner">
+        <div class="flex items-center space-x-4">
+            <a href="/" class="font-bold">0xKSALTY</a>
+            <ul class="flex space-x-4">
+                <li><a href="https://github.com/0xKSALTY" target="_blank"><i class="fa fa-github"></i></a></li>
+                <li><a href="https://www.linkedin.com/in/keelan-salter" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="mailto:ksaltercv@gmail.com"><i class="fa fa-envelope"></i></a></li>
+            </ul>
+        </div>
+        <ul class="flex space-x-6 list-none">
+            <li><a href="#" id="aboutMeLink" class="font-mono">About.</a></li>
+            <li><a href="/experience/experience.html" class="font-mono">Experience.</a></li>
+            <li class="relative">
+                <a href="#" id="optionsMenuButton" class="font-mono">Cyber Journey.</a>
+                <div id="optionsMenu" class="absolute hidden bg-white text-black py-2 mt-1 rounded shadow-lg">
+                    <a href= "/ccna/ccna.html" class="block px-4 py-2 text-sm text-gray-700">Networking</a>
+                    <a href="/operating_systems/os.html" class="block px-4 py-2 text-sm text-gray-700">Operating Systems</a>
+                    <a href="/robotics/robotics.html" class="block px-4 py-2 text-sm text-gray-700">Robotics</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div id="aboutMePopup" class="fixed inset-0 flex items-center justify-center hidden z-20 transition-opacity duration-300 ease-in-out">
+        <div class="popup-content bg-white p-8 rounded-lg shadow-lg relative transform transition-transform duration-300 ease-in-out scale-75">
+            <span class="close absolute top-0 right-0 p-4 cursor-pointer text-gray-500 hover:text-gray-800">&times;</span>
+            <h2 class="text-2xl mb-4 text-center font-semibold">About Me</h2>
+            <p id="aboutMeDetails" class="text-center"></p>
+        </div>
+    </div>
+
+
+    <h1 class="title text-center text-5xl mt-4 relative z-10 text-white" style="padding-top: 8rem;">Keelan Salter</h1>
+
+    <script type="module" src="main.js"></script>
+    
+    <script>
+     document.addEventListener('DOMContentLoaded', function() {
+    var optionsMenuButton = document.getElementById('optionsMenuButton');
+    var optionsMenu = document.getElementById('optionsMenu');
+
+    optionsMenuButton.onclick = function(event) {
+        event.preventDefault();
+        optionsMenu.classList.toggle('hidden');
+        optionsMenu.classList.toggle('block');
+    };
+
+    document.addEventListener('click', function(event) {
+        if (!optionsMenuButton.contains(event.target) && !optionsMenu.contains(event.target)) {
+            optionsMenu.classList.add('hidden');
+            optionsMenu.classList.remove('block');
+        }
+    });
+
+    var dropdownLinks = optionsMenu.getElementsByTagName('a');
+    for (var i = 0; i < dropdownLinks.length; i++) {
+        dropdownLinks[i].onclick = function(event) {
+            event.stopPropagation(); // Prevent the click from closing the dropdown
+        };
+    }
+    
+});
+    </script>
+    
+</body>
+</html>
+
