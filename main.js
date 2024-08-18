@@ -1,9 +1,10 @@
-import './style.css'
-import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/Addons.js';
-import { normalMap } from 'three/examples/jsm/nodes/Nodes.js';
-import { TextGeometry } from 'three/addons/geometries/TextGeometry.js';
-import gsap from "gsap";
+import './style.css';
+import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.150.0/build/three.module.js';
+import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/controls/OrbitControls.js';
+import { normalMap } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/nodes/Nodes.js';
+import { TextGeometry } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/geometries/TextGeometry.js';
+import gsap from 'https://cdn.jsdelivr.net/npm/gsap@3.11.5/dist/gsap.min.js';
+
 
 
 // rendering and scene
