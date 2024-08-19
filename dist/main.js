@@ -1,11 +1,7 @@
 import './style.css';
-import * as THREE from 'https://cdnjs.cloudflare.com/ajax/libs/three.js/0.167.1/three.module.js';
-import { OrbitControls } from 'https://cdn.jsdelivr.net/npm/three-orbitcontrols@2.110.3/OrbitControls.min.js';
-import { normalMap } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/nodes/Nodes.js';
-import { TextGeometry } from 'https://cdn.jsdelivr.net/npm/three@0.150.0/examples/jsm/geometries/TextGeometry.js';
-import gsap from 'https://cdn.jsdelivr.net/npm/gsap@3.11.5/dist/gsap.min.js';
-
-
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { gsap } from 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.js';
 
 // rendering and scene
 const scene = new THREE.Scene();
@@ -55,9 +51,8 @@ function addStar(){
 Array(200).fill().forEach(addStar)
 
 // space bg
-const spaceTexture = new THREE.TextureLoader().load('space.jpg');
+const spaceTexture = new THREE.TextureLoader().load('../../static/space.jpg');
 scene.background = spaceTexture;
-const meTexture = new THREE.TextureLoader().load('me.jpg');
 
 // camera movement
 function moveCamera(){
